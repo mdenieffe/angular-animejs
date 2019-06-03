@@ -100,7 +100,7 @@ export class MessageRotatorComponent implements OnInit, AfterViewInit, OnDestroy
         el.className =
             'text-center text-italic text-uppercase text-bold content-item item-' +
             index;
-        el.style.cssText = `min-height: ${elementHeight}px !important; padding-top: 15px;`;
+        el.style.cssText = `min-height: ${elementHeight}px !important;`;
         el.innerText = message;
 
         return el;
