@@ -81,7 +81,10 @@ export class MessageRotatorComponent implements OnInit, AfterViewInit, OnDestroy
                         const previousElement = this.getElement(
                             `.item-${previousIndex}`
                         );
-                        previousElement.remove();
+                        
+                        if (previousElement) {
+                          previousElement.remove();
+                        }
                     },
                 });
             });
