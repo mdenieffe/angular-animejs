@@ -97,7 +97,7 @@ export class MessageRotatorComponent implements OnInit, AfterViewInit, OnDestroy
         message: string
     ) {
         const el = document.createElement('div');
-        console.log(`el: ${JSON.stringify(el)}`);
+
         el.className =
             'text-center text-italic text-uppercase text-bold content-item item-' +
             index;
@@ -108,7 +108,9 @@ export class MessageRotatorComponent implements OnInit, AfterViewInit, OnDestroy
     }
 
     private setElementStyle(element: HTMLElement) {
+      if (element) {
         element.style.cssText += 'transform: translateY(0);';
+      }
     }
 
     private getRandomColor() {
